@@ -1,0 +1,39 @@
+#!/bin/bash
+
+
+##############################################
+#Author:Raghu
+#Date:26-12-2024
+#
+#
+#Version-1.0
+#
+#This script will report AWS usage
+#
+#
+#AWS instances
+#AWS S3
+#AWS Lambda
+#AWS IAM Users
+#
+
+set -e
+set -o
+
+#AWS list s3 buckets
+echo "List of S3 Buckets"
+aws s3 ls
+
+
+
+#list of EC2 instances
+echo "List of EC2 Instances"
+aws ec2  describe-instances
+
+#list of lambda
+echo "list of lambda functions"
+aws lambda list-functions
+
+#list of IAM users
+echo "list of IAm Users"
+aws iam list-users
